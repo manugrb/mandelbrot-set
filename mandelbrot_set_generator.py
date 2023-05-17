@@ -4,10 +4,7 @@ import tkinter
 
 
 # f(z) = z² + c
-# where c = a + bi with a and b being rational numbers and i being i.
-
-pixels = [[]]
-        
+# where c = a + bi with a and b being rational numbers and i being i.        
 
 def devergesToInfinity(a, b):
 
@@ -50,12 +47,3 @@ def f(za, zb, a, b):
     resultb = zzb + b
 
     return [resulta, resultb]
-
-
-for a in numpy.arange(-1.4, -1.35, 0.000125):
-    column = []
-    for b in numpy.arange(-0.025, 0.025, 0.000125):
-        column.append(devergesToInfinity(a, b))
-
-    print(a)
-    pixels.append(column)
