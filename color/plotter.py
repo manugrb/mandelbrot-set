@@ -2,7 +2,7 @@ import tkinter
 import numpy
 import mandelbrot_set_generator
 
-maxIterations = 200
+maxIterations = 100
 
 def getHexColor(iterations, maxIterations):
 
@@ -11,7 +11,11 @@ def getHexColor(iterations, maxIterations):
 
     absoluteValue = round(relativeValue * maxValue)
 
-    hexString = f'#{absoluteValue:02x}0000'
+    redValue = round(abs(255 - relativeValue * 510))
+
+    greenValue = 255 - absoluteValue
+
+    hexString = f'#{redValue:02x}{greenValue:02x}{absoluteValue:02x}'
     return hexString
 
 
@@ -20,9 +24,9 @@ C = tkinter.Canvas(top, bg="black", height=400, width=400)
 
 pixels = [[]]
 
-for a in numpy.arange(-2, 2, 0.01):
+for a in numpy.arange(-2, 0, 0.005):
     column = []
-    for b in numpy.arange(-2, 2, 0.01):
+    for b in numpy.arange(-1, 1, 0.005):
         column.append(mandelbrot_set_generator.devergesToInfinity(a, b, maxIterations=maxIterations))
 
     print(a)
