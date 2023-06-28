@@ -5,9 +5,12 @@ Program to visualize the Mandelbrot set on a Tkinter canvas using python
 To learn more about the Mandelbrot set, check out this wikipedia article: https://en.wikipedia.org/wiki/Mandelbrot_set
 
 ## Color version
+![Screenshot_20230628_135135](https://github.com/manugrb/mandelbrot-set/assets/81778405/fa58b867-a3f0-4dc8-9395-06253d749dfa)
 
 
 ## Single color version
+![Screenshot_20230628_150248](https://github.com/manugrb/mandelbrot-set/assets/81778405/b7b7e54f-d112-487b-a106-f60347e278be)
+
 
 Right now, there are 2 versions of the program. The black and white version only colors all the pixels corresponding to the coordinates, that did not deverge to infinity in the tested interval of runs. The color version colors every pixel depending on how many iterations it took to prove, that it deverges to infinity. If it could not prove, that it diverges to infinity, it colors it in full color.
 
